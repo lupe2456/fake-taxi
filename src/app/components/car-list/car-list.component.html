@@ -1,0 +1,27 @@
+<div>
+    <h2>Lista de Autos</h2>
+  
+    <label>Categoría:</label>
+    <input type="text" [(ngModel)]="categoryFilter" placeholder="Ingrese categoría" />
+  
+    <label>Precio máximo:</label>
+    <input type="number" [(ngModel)]="priceFilter" placeholder="Ingrese precio máximo" />
+  
+    <label>Disponibilidad:</label>
+    <select [(ngModel)]="availabilityFilter">
+      <option [ngValue]="null">Todas</option>
+      <option [ngValue]="true">Disponible</option>
+      <option [ngValue]="false">No Disponible</option>
+    </select>
+  
+    <button (click)="filterCars()">Filtrar</button>
+  
+    <ul>
+      <li *ngFor="let car of cars()">
+        {{ car.brand }} - {{ car.model }} ({{ car.category }}) - ${{ car.price }}
+        <span *ngIf="car.available">✅ Disponible</span>
+        <span *ngIf="!car.available">❌ No Disponible</span>
+      </li>
+    </ul>
+  </div>
+  

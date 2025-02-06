@@ -5,11 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { FooterComponent } from './components/footer/footer.component';
+
+import { CarListComponent } from './components/car-list/car-list.component';
 import { HomeComponent } from './components/home/home.component';
-const components = [FooterComponent];
+import { FormsModule } from '@angular/forms';
+const components = [FooterComponent, CarListComponent, HomeComponent];
 @NgModule({
-  declarations: [AppComponent, ...components, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, ...components],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
