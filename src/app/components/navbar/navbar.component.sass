@@ -1,0 +1,72 @@
+$primary-color: #000
+$secondary-color: #ECF0F1
+$hover-color: #f4c542
+$active-color: #FFD700
+$font-stack: Helvetica, sans-serif
+$font-size: 16px
+
+.navbar
+  background: $primary-color
+  padding: 1rem 2rem
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+
+  .navbar-container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1200px
+    margin: 0 auto
+
+  .logo img
+    height: 50px
+    transition: transform 0.3s ease-in-out
+    
+    &:hover
+      transform: scale(1.1)
+
+  .nav-links
+    list-style: none
+    display: flex
+    gap: 1.5rem
+
+    li
+      a
+        text-decoration: none
+        color: $secondary-color
+        font-size: 1.1rem
+        font-weight: 600
+        transition: color 0.3s ease-in-out
+
+        &:hover
+          color: $hover-color
+
+        &.active
+          color: $active-color
+
+  .menu-toggle
+    display: none
+    flex-direction: column
+    cursor: pointer
+
+    span
+      background: $secondary-color
+      margin: 4px 0
+      width: 25px
+      height: 3px
+      transition: background 0.3s ease-in-out
+
+    &:hover span
+      background: $hover-color
+
+@media (max-width: 768px)
+  .nav-links
+    display: none
+    flex-direction: column
+    width: 100%
+    text-align: center
+
+    li
+      margin: 1rem 0
+
+  .menu-toggle
+    display: flex
