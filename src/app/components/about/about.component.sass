@@ -1,0 +1,86 @@
+$primary-color: #000
+$secondary-color: #ECF0F1
+$hover-color: #f4c542
+$active-color: #FFD700
+$p-color:rgb(120, 122, 122)
+$font-stack: Helvetica, sans-serif
+$font-size: 16px
+
+.about-container
+  padding: 3rem 2rem
+  background-color: #fff
+  font-family: $font-stack
+  max-width: 1200px
+  margin: 0 auto
+  text-align: center
+
+  .about-header
+    margin-bottom: 2rem
+    
+    h1
+      font-size: 2.5rem
+      font-weight: bold
+      color: $primary-color
+      margin-bottom: 1rem
+
+    p
+      font-size: 1.2rem
+      color: $p-color
+      max-width: 900px
+      margin: 0 auto
+      line-height: 1.6
+      font-weight: 300
+
+.about-section
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-bottom: 3rem
+
+  .about-card
+    width: 30%
+    background-color: #f8f8f8
+    border-radius: 8px
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    padding: 1.5rem
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out
+
+    h3
+      font-size: 1.5rem
+      font-weight: bold
+      color: $primary-color
+
+    p
+      font-size: 1.1rem
+      color: $secondary-color
+      margin-top: 1rem
+
+    &:hover
+      transform: translateY(-10px)
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2)
+
+.about-contact
+  background-color: $primary-color
+  color: $secondary-color
+  padding: 3rem 2rem
+  border-radius: 8px
+  margin-top: 2rem
+
+  h2
+    font-size: 2rem
+    font-weight: bold
+    margin-bottom: 1rem
+
+  p
+    font-size: 1.2rem
+    margin-bottom: 2rem
+
+  a
+    text-decoration: none
+    font-weight: bold
+    color: $hover-color
+    font-size: 1.3rem
+    transition: color 0.3s ease-in-out
+
+    &:hover
+      color: $active-color
