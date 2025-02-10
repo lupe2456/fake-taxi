@@ -5,7 +5,8 @@ import { CarService } from '../services/car.service';
 @Component({
   selector: 'app-car-list',
   templateUrl: './car-list.component.html',
-  styleUrls: ['./car-list.component.scss']
+  styleUrl: './car-list.component.scss',
+  standalone: false
 })
 export class CarListComponent {
   categoryFilter: string = '';

@@ -4,10 +4,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
+
   styleUrls: ['./reservation.component.scss']
+
+
 })
 export class ReservationComponent {
-  // Definimos el formulario reactivo
+  // Definimos el formulario reactivox
   reservationForm: FormGroup;
 
   // Lista de autos disponibles
