@@ -1,5 +1,6 @@
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { FormsModule } from '@angular/forms';
 const components = [FooterComponent, HomeComponent, AboutComponent, NavbarComponent, ReservationComponent, LoginComponent,CarListComponent];
 @NgModule({
   declarations: [AppComponent, ...components],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

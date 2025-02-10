@@ -1,1 +1,25 @@
-<p>reservation works!</p>
+<div class="reservation-container">
+  <h2>Reservación de Autos</h2>
+  
+  <form [formGroup]="reservationForm" (ngSubmit)="submitReservation()" class="reservation-form">
+      <label for="car">Selecciona un auto:</label>
+      <select id="car" formControlName="car" class="select-field">
+          <option value="" disabled selected>Selecciona un auto</option>
+          <option *ngFor="let car of cars" [value]="car.id">{{ car.name }}</option>
+      </select>
+
+      <label for="startDate">Fecha de inicio:</label>
+      <input type="date" id="startDate" formControlName="startDate" class="input-field" />
+
+      <label for="endDate">Fecha de fin:</label>
+      <input type="date" id="endDate" formControlName="endDate" class="input-field" />
+
+      <label for="paymentMethod">Método de pago:</label>
+      <select id="paymentMethod" formControlName="paymentMethod" class="select-field">
+          <option value="" disabled selected>Selecciona un método</option>
+          <option *ngFor="let method of paymentMethods" [value]="method">{{ method }}</option>
+      </select>
+
+      <button type="submit" [disabled]="reservationForm.invalid" class="reserve-button">Reservar</button>
+  </form>
+</div>

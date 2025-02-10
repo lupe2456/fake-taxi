@@ -1,0 +1,52 @@
+.reservation-container {
+  font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field, .select-field {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  transition: 0.3s ease-in-out;
+}
+
+.input-field:focus, .select-field:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.reserve-button {
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reserve-button:hover {
+  background: #0056b3;
+}
