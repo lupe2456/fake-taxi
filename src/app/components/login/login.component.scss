@@ -1,0 +1,152 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.login-logo {
+  margin-bottom: 20px;
+  width: 150px;
+  height: auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  padding: 30px;
+  border: 1px solid #ced4da;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.login-form input {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #ffcc00; /* Adapted color */
+  box-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.login-form button {
+  padding: 15px;
+  font-size: 16px;
+  background-color: #ffcc00; /* Adapted color */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #e6b800; /* Adapted color */
+  transform: translateY(-2px);
+}
+
+.login-form .error {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login-form .success {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.additional-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.additional-links a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.additional-links a:hover {
+  color: #0056b3;
+}
+
+.social-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-login p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.social-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button.google {
+  background-color: #db4437;
+  color: white;
+}
+
+.social-button.google:hover {
+  background-color: #c23321;
+  transform: translateY(-2px);
+}
+
+.social-button.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.social-button.facebook:hover {
+  background-color: #2d4373;
+  transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    width: 90%;
+  }
+}

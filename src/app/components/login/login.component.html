@@ -1,1 +1,22 @@
-<p>login works!</p>
+<div class="login-container">
+  <img src="/assets/images/logo.png" alt="Logo" class="login-logo" />
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+    <input formControlName="username" placeholder="Username" type="text" />
+    <input formControlName="password" placeholder="Password" type="password" />
+    <button type="submit" [disabled]="isLoading">
+      <span *ngIf="isLoading">Loading...</span>
+      <span *ngIf="!isLoading">Login</span>
+    </button>
+    <div class="additional-links">
+      <a href="#">Forgot password?</a>
+      <a href="#">Sign up</a>
+    </div>
+  </form>
+  <div class="social-login">
+    <p>Or login with:</p>
+    <button class="social-button google">Google</button>
+    <button class="social-button facebook">Facebook</button>
+  </div>
+</div>
