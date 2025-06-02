@@ -11,6 +11,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ErrorComponent } from './components/error/error.component';
 const components = [
   FooterComponent,
   HomeComponent,
@@ -21,7 +22,7 @@ const components = [
   CarListComponent,
 ];
 @NgModule({
-  declarations: [AppComponent, ...components],
+  declarations: [AppComponent, ...components, ErrorComponent],
 
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
 

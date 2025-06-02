@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { CarListComponent } from './components/car-list/car-list.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {
@@ -30,7 +31,8 @@ const routes: Routes = [
   {
     path: 'car-list',
     component: CarListComponent,
-  }
+  },
+  { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
